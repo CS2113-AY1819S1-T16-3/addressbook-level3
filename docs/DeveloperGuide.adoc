@@ -99,25 +99,33 @@ Use case ends.
 +
 Use case resumes at step 2.
 
-Use case: Add Person
-MSS
-1.	User enters add command.
-2.	AddressBook prompts to add person.
-3.	User enters the details of the new person.
-4.	AddressBook adds the new person.
-Use case ends.
-Extensions
-•	4a. Person already exists in the AddressBook.
-o	4a1. AddressBook shows person already exists message.
-Use case ends.
-•	4b. The added person has missing details.
-o	4b1. AddressBook shows an error message.
-Use case ends.
-•	4c. The added person has wrong entry format.
-o	4c1. AddressBook shows an error message.
+=== Use case: Add Person
+*MSS*
+.	User enters add command.
+.	AddressBook prompts to add person.
+.	User enters the details of the new person.
+.	AddressBook adds the new person.
++
 Use case ends.
 
-Use case: Delete Person
+*Extensions*
+* 4a. Person already exists in the AddressBook.
+** 4a1. AddressBook shows person already exists message.
++
+Use case ends.
+
+* 4b. The added person has missing details.
+** 4b1. AddressBook shows an error message.
++
+Use case ends.
+
+* 4c. The added person has wrong entry format.
+** 4c1. AddressBook shows an error message.
++
+Use case ends.
+
+
+===Use case: Delete Person
 MSS
 1.	User enters delete command
 2.	AddressBook shows the list of employees
