@@ -126,14 +126,16 @@ Use case ends.
 +
 Use case ends.
 
-
 ===Use case: Delete Person
-MSS
-1.	User enters delete command
-2.	AddressBook shows the list of employees
-3.	User requests to delete a specific employee
-4.	AddressBook deletes the employee
+*MSS*
+
+.	User enters delete command
+.	AddressBook shows the list of employees
+.	User requests to delete a specific employee
+.	AddressBook deletes the employee
++
 Use case ends.
+
 Extensions
 •	2a. The list is empty.
 Use case ends.
@@ -141,8 +143,9 @@ Use case ends.
 o	4a1. AddressBook shows an error message.
 Use case resumes to step 2.
 
-Use case: Apply Off days
-MSS 
+===Use case: Apply Off days
+*MSS*
+
 1.	User enters command to apply off day
 2.	AddressBook list the remaining off days left and prompts the date the user wants to apply on
 3.	User enters date
@@ -154,17 +157,16 @@ Use case ends.
 o	4a1. AddressBook shows an error message.
 Use case resumes to step 2.
 
- 
-Use case: Check in and out 
-MSS
+===Use case: Check in and out 
+*MSS*
 1.	User enters command to check in.
 2.	AddressBook starts to time the user working hours.
 3.	User enters command to check out.
 4.	AddressBook stops timer, and records the user working hours.
 Use case ends.
 
-Use case: Temporary restrict access to address book
-MSS 
+===Use case: Temporary restrict access to address book
+*MSS*
 1.	User enters command to switch to superuser
 2.	AddressBook prompts for password.
 3.	User enters password
@@ -180,26 +182,25 @@ Use case resumes to step 2.
 o	6a1. AddressBook shows an error message.
 Use case resumes to step 4.
 
-Use case: Access payroll
-MSS
+===Use case: Access payroll
+*MSS*
 1.	User enters command to check payroll.
 2.	AddressBook shows the user payroll.
 Use case ends.
 
-Use case: Check notification
+===Use case: Check notification
 MSS 
 1.	User enters command to check for notification
 2.	AddressBook list out notifications
 Use case end
 
-Use case: Sort contact by department
-MSS
+===Use case: Sort contact by department
+*MSS*
 1.	User enters sort command.
 2.	AddressBook shows a list of sorted names by their department.
 Use case ends.
 
- 
-Use case: Change priority level of user 
+===Use case: Change priority level of user 
 MSS 
 1.	User enters superuser command
 2.	AddressBook prompts password
@@ -224,8 +225,8 @@ Use case resumes to step 6.
 o	8b1. AddressBook shows an error message.
 Use case resumes to step 6.
 
-Use case: Edit personal particulars
-MSS
+===Use case: Edit personal particulars
+*MSS*
 1.	User enters edit command.
 2.	AddressBook shows the format to edit the person details.
 3.	User edit his/her particulars.
@@ -236,8 +237,8 @@ Extensions
 o	4a1. AddressBook shows an error message.
 Use case ends.
 
-Use case: Find person
-MSS
+===Use case: Find person
+*MSS*
 1.	User keys in the keyword to search in find command.
 2.	AddressBook displays the list of names which contains the keyword given.
 Use case ends.
@@ -245,8 +246,8 @@ Extensions
 •	2a. AddressBook does not contain the keyword entered.
 o	2a1. AddressBook displays entered keyword not found.
 Use case ends.
- 
-Use case: Approve/reject off day request
+
+===Use case: Approve/reject off day request
 MSS
 1.	User enters command to switch to superuser
 2.	AddressBook prompts for password
@@ -273,7 +274,7 @@ Use case ends
 o	8a1. AddressBook shows an error message.
 Use case resumes to step 6.
 
-Use case: Check schedule
+===Use case: Check schedule
 MSS
 1.	User enters command to check schedule
 2.	AddressBook display user’s schedule
@@ -283,7 +284,7 @@ Extensions
 o	2a1. Address book displays message “No tasks scheduled for the day”.
 Use case ends.
 
-Use case: Set schedule
+===Use case: Set schedule
 MSS
 1.	User enters command to switch to superuser
 2.	AddressBook prompts for password
@@ -305,8 +306,7 @@ Use case ends.
 o	10a1. AddressBook displays message “Employee is busy on the given date”.
 Use case ends.
 
-
-Use case: Set password
+===Use case: Set password
 MSS
 1.	User enters password command.
 2.	AddressBook shows the password format to be keyed in.
