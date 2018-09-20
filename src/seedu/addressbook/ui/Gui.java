@@ -1,10 +1,11 @@
 package seedu.addressbook.ui;
 
+import seedu.addressbook.logic.Logic;
+import seedu.addressbook.Main;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import seedu.addressbook.logic.Logic;
-import seedu.addressbook.Main;
 
 import java.io.File;
 import java.io.IOException;

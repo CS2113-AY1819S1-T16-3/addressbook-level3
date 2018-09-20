@@ -46,12 +46,30 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 [width="100%",cols="22%,<23%,<25%,<30%",options="header",]
 |===========================================================================================================================================
 |Priority |As a ... |I want to ... |So that I can...
-|`* * *` |new user |see usage instructions |refer to instructions when I forget how to use the App
-|`* * *` |user |add a new person |
-|`* * *` |user |delete a person |remove entries that I no longer need
-|`* * *` |user |find a person by name |locate details of persons without having to go through the entire list
-|`* *` |user |hide <<private-contact-detail, private contact details>> by default |minimize chance of someone else seeing them by accident
-|`*` |user with many persons in the address book |sort persons by name |locate a person easily
+|***	|user	|Access my payroll	|Calculate my incoming pay according to the number of hours I have worked easily
+|***	|user	|Check my schedule	|Know where I am deployed for the day
+|***	|user	|Check my notifications via CLI	|View my notifications
+|***	|Elevated user	|Set employees’ access levels	|Ensure that employees have the appropriate level of access to classified items/areas
+|***	|Elevated user	|Add/Delete/Edit employees into the database	|Ensure that the company manpower list is updated
+|***	|Elevated user	|Set schedule for employee 	|Deploy employees to their designated location.
+|***	|User	|Edit my personal particulars	|Update them as required (Edit function)
+|***	|Elevated user	|Access employee off-day requests	|Approve/Reject off for employees
+|***	|User	|Search for a specific contact	|Obtain the particulars of the contact easily
+|***	|Elevated user	|Sort contacts by department	|Allocate manpower accordingly
+|***	|User	|Sort my address book by name/department	|Look for contacts that I want easily
+|***	|User	|Filter and view my relevant colleague’s contact details	|Get in touch in them seamlessly
+|***	|User	|Set password to my address book	|Prevent unauthorized access to my address book
+|***	|user	|access my remaining off days	|Apply for my off
+|***	|user	|check in and out during my work days	|I will be able to view the number of hours I have worked for
+|***	|Elevated user	|Check my employees’ working hours	|Pay them accordingly
+|***	|Administrator	|Restrict employee access to the address book application	|Perform maintenance or upgrades
+|**	|User	|Check the staff’s direct superior	|Feedback to the particular superior
+|**	|User	|Set my availability status (available, busy, away)	|Let colleagues decide their best course of action according to my status
+|**	|Elevated User	|Send out alerts to an individual/group	|Ensure that everyone is caught up with the latest developments
+|**	|User	|Notified via email/sms	|Get the latest updates at the earliest possible time
+|**	|User	|Upload profile picture	|I can be identified easily by others
+|**	|User	|Use keyboard shortcuts	|Quickly navigate around the address book
+|*	|User	|Deploy available cleaners	|Get the place cleaned up as soon as possible.
 |===========================================================================================================================================
 
 [appendix]
@@ -80,6 +98,216 @@ Use case ends.
 ** 3a1. AddressBook shows an error message.
 +
 Use case resumes at step 2.
+
+Use case: Add Person
+MSS
+1.	User enters add command.
+2.	AddressBook prompts to add person.
+3.	User enters the details of the new person.
+4.	AddressBook adds the new person.
+Use case ends.
+Extensions
+•	4a. Person already exists in the AddressBook.
+o	4a1. AddressBook shows person already exists message.
+Use case ends.
+•	4b. The added person has missing details.
+o	4b1. AddressBook shows an error message.
+Use case ends.
+•	4c. The added person has wrong entry format.
+o	4c1. AddressBook shows an error message.
+Use case ends.
+
+Use case: Delete Person
+MSS
+1.	User enters delete command
+2.	AddressBook shows the list of employees
+3.	User requests to delete a specific employee
+4.	AddressBook deletes the employee
+Use case ends.
+Extensions
+•	2a. The list is empty.
+Use case ends.
+•	4a. The given employee name is invalid
+o	4a1. AddressBook shows an error message.
+Use case resumes to step 2.
+
+Use case: Apply Off days
+MSS 
+1.	User enters command to apply off day
+2.	AddressBook list the remaining off days left and prompts the date the user wants to apply on
+3.	User enters date
+4.	AddressBook add the request to the database for approval
+Extensions
+•	2a. No remaining days left
+Use case ends.
+•	4a. The given date is not available for application 
+o	4a1. AddressBook shows an error message.
+Use case resumes to step 2.
+
+ 
+Use case: Check in and out 
+MSS
+1.	User enters command to check in.
+2.	AddressBook starts to time the user working hours.
+3.	User enters command to check out.
+4.	AddressBook stops timer, and records the user working hours.
+Use case ends.
+
+Use case: Temporary restrict access to address book
+MSS 
+1.	User enters command to switch to superuser
+2.	AddressBook prompts for password.
+3.	User enters password
+4.	AddressBook prompts a superuser command
+5.	User enters restrict access command
+6.	AddressBook restrict access for all users.
+Use case end
+Extensions
+•	4a. Incorrect password
+o	4a1. AddressBook shows an error message.
+Use case resumes to step 2.
+•	6a. No such command 
+o	6a1. AddressBook shows an error message.
+Use case resumes to step 4.
+
+Use case: Access payroll
+MSS
+1.	User enters command to check payroll.
+2.	AddressBook shows the user payroll.
+Use case ends.
+
+Use case: Check notification
+MSS 
+1.	User enters command to check for notification
+2.	AddressBook list out notifications
+Use case end
+
+Use case: Sort contact by department
+MSS
+1.	User enters sort command.
+2.	AddressBook shows a list of sorted names by their department.
+Use case ends.
+
+ 
+Use case: Change priority level of user 
+MSS 
+1.	User enters superuser command
+2.	AddressBook prompts password
+3.	User enters password
+4.	AddressBook prompts user for ‘superuser’ command
+5.	User enters priority level command
+6.	AddressBook prompts user for employee name and new priority level
+7.	User enters both employee name and new priority level
+8.	AddressBook updates the changes
+Use case ends.
+Extensions
+•	4a. Incorrect password
+o	4a1. AddressBook shows an error message.
+Use case resumes to step 2.
+•	6a. No such command 
+o	6a1. AddressBook shows an error message.
+Use case resumes to step 4.
+•	8a. No such employee found 
+o	8a1. AddressBook shows an error message.
+Use case resumes to step 6.
+•	8b. No such priority level
+o	8b1. AddressBook shows an error message.
+Use case resumes to step 6.
+
+Use case: Edit personal particulars
+MSS
+1.	User enters edit command.
+2.	AddressBook shows the format to edit the person details.
+3.	User edit his/her particulars.
+4.	AddressBook updates the new particulars.
+Use case ends.
+Extensions
+•	4a. The edited format is wrong
+o	4a1. AddressBook shows an error message.
+Use case ends.
+
+Use case: Find person
+MSS
+1.	User keys in the keyword to search in find command.
+2.	AddressBook displays the list of names which contains the keyword given.
+Use case ends.
+Extensions
+•	2a. AddressBook does not contain the keyword entered.
+o	2a1. AddressBook displays entered keyword not found.
+Use case ends.
+ 
+Use case: Approve/reject off day request
+MSS
+1.	User enters command to switch to superuser
+2.	AddressBook prompts for password
+3.	User enters password
+4.	AddressBook prompts for superuser command
+5.	User enters command to view requests
+6.	AddressBook list out all requests
+7.	User enters employee name
+8.	AddressBook prompts user to approve or reject request
+9.	User enters approve/reject
+10.	AddressBook update database
+Use case ends.
+Extensions
+•	4a. Incorrect password
+o	4a1. AddressBook shows an error message.
+Use case resumes to step 2.
+•	6a. No such command 
+o	6a1. AddressBook shows an error message.
+Use case resumes to step 4.
+•	6b. No request found
+o	6b1. AddressBook shows an error message.
+Use case ends
+•	8a. No such employee with existing request found 
+o	8a1. AddressBook shows an error message.
+Use case resumes to step 6.
+
+Use case: Check schedule
+MSS
+1.	User enters command to check schedule
+2.	AddressBook display user’s schedule
+Use case ends.
+Extensions
+•	2a. No user schedule found.
+o	2a1. Address book displays message “No tasks scheduled for the day”.
+Use case ends.
+
+Use case: Set schedule
+MSS
+1.	User enters command to switch to superuser
+2.	AddressBook prompts for password
+3.	User enters password
+4.	AddressBook prompts for superuser command
+5.	User enters command to set schedule
+6.	AddressBook prompts for the employee name 
+7.	User enters employee name
+8.	AddressBook prompts for the date of schedule and location
+9.	User enters the date and location
+10.	AddressBook updates the schedule
+Use case ends.
+
+Extensions
+•	8a. Employee name not found.
+o	8a1. AddressBook displays message “Employee not found”.
+Use case ends.
+•	10a. The date of schedule is already occupied.
+o	10a1. AddressBook displays message “Employee is busy on the given date”.
+Use case ends.
+
+
+Use case: Set password
+MSS
+1.	User enters password command.
+2.	AddressBook shows the password format to be keyed in.
+3.	User keys in password.
+4.	AddressBook stores the person’s new password.
+Use case ends.
+Extensions
+•	4a. The password is keyed in the wrong format
+o	4a1. AddressBook shows an error message.
+Use case ends.
+
 
 [appendix]
 == Non Functional Requirements
