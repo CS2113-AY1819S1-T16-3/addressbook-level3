@@ -136,188 +136,239 @@ Use case ends.
 +
 Use case ends.
 
-Extensions
-•	2a. The list is empty.
+*Extensions*
+* 2a. The list is empty.
++
 Use case ends.
-•	4a. The given employee name is invalid
-o	4a1. AddressBook shows an error message.
+
+* 4a. The given employee name is invalid
+** 4a1. AddressBook shows an error message.
++
 Use case resumes to step 2.
 
 === Use case: Apply Off days
 *MSS*
 
-1.	User enters command to apply off day
-2.	AddressBook list the remaining off days left and prompts the date the user wants to apply on
-3.	User enters date
-4.	AddressBook add the request to the database for approval
-Extensions
-•	2a. No remaining days left
+.	User enters command to apply off day
+.	AddressBook list the remaining off days left and prompts the date the user wants to apply on
+.	User enters date
+.	AddressBook add the request to the database for approval
++
 Use case ends.
-•	4a. The given date is not available for application 
-o	4a1. AddressBook shows an error message.
+
+*Extensions*
+* 2a. No remaining days left
++
+Use case ends.
+
+
+* 4a. The given date is not available for application 
+*  4a1. AddressBook shows an error message.
++
 Use case resumes to step 2.
 
 === Use case: Check in and out 
 *MSS*
-1.	User enters command to check in.
-2.	AddressBook starts to time the user working hours.
-3.	User enters command to check out.
-4.	AddressBook stops timer, and records the user working hours.
+. User enters command to check in.
+. AddressBook starts to time the user working hours.
+. User enters command to check out.
+. AddressBook stops timer, and records the user working hours.
++
 Use case ends.
 
 === Use case: Temporary restrict access to address book
 *MSS*
-1.	User enters command to switch to superuser
-2.	AddressBook prompts for password.
-3.	User enters password
-4.	AddressBook prompts a superuser command
-5.	User enters restrict access command
-6.	AddressBook restrict access for all users.
-Use case end
-Extensions
-•	4a. Incorrect password
-o	4a1. AddressBook shows an error message.
+. User enters command to switch to superuser
+. AddressBook prompts for password.
+. User enters password
+. AddressBook prompts a superuser command
+. User enters restrict access command
+. AddressBook restrict access for all users.
++
+Use case ends.
+
+*Extensions*
+* 4a. Incorrect password
+** 4a1. AddressBook shows an error message.
++
 Use case resumes to step 2.
-•	6a. No such command 
-o	6a1. AddressBook shows an error message.
+
+* 6a. No such command 
+** 6a1. AddressBook shows an error message.
++
 Use case resumes to step 4.
 
 === Use case: Access payroll
 *MSS*
-1.	User enters command to check payroll.
-2.	AddressBook shows the user payroll.
+. User enters command to check payroll.
+. AddressBook shows the user payroll.
 Use case ends.
 
 === Use case: Check notification
 MSS 
-1.	User enters command to check for notification
-2.	AddressBook list out notifications
-Use case end
+. User enters command to check for notification
+. AddressBook list out notifications
++
+Use case ends.
 
 === Use case: Sort contact by department
 *MSS*
-1.	User enters sort command.
-2.	AddressBook shows a list of sorted names by their department.
+. User enters sort command.
+. AddressBook shows a list of sorted names by their department.
++
 Use case ends.
 
 === Use case: Change priority level of user 
-MSS 
-1.	User enters superuser command
-2.	AddressBook prompts password
-3.	User enters password
-4.	AddressBook prompts user for ‘superuser’ command
-5.	User enters priority level command
-6.	AddressBook prompts user for employee name and new priority level
-7.	User enters both employee name and new priority level
-8.	AddressBook updates the changes
+*MSS* 
+. User enters superuser command
+. AddressBook prompts password
+. User enters password
+. AddressBook prompts user for ‘superuser’ command
+. User enters priority level command
+. AddressBook prompts user for employee name and new priority level
+. User enters both employee name and new priority level
+. AddressBook updates the changes
++
 Use case ends.
-Extensions
-•	4a. Incorrect password
-o	4a1. AddressBook shows an error message.
+
+*Extensions*
+* 4a. Incorrect password
+** 4a1. AddressBook shows an error message.
++
 Use case resumes to step 2.
-•	6a. No such command 
-o	6a1. AddressBook shows an error message.
+
+* 6a. No such command 
+** 6a1. AddressBook shows an error message.
++
 Use case resumes to step 4.
-•	8a. No such employee found 
-o	8a1. AddressBook shows an error message.
+
+* 8a. No such employee found 
+** 8a1. AddressBook shows an error message.
++
 Use case resumes to step 6.
-•	8b. No such priority level
-o	8b1. AddressBook shows an error message.
+
+* 8b. No such priority level
+** 8b1. AddressBook shows an error message.
++
 Use case resumes to step 6.
 
 === Use case: Edit personal particulars
 *MSS*
-1.	User enters edit command.
-2.	AddressBook shows the format to edit the person details.
-3.	User edit his/her particulars.
-4.	AddressBook updates the new particulars.
+. User enters edit command.
+. AddressBook shows the format to edit the person details.
+. User edit his/her particulars.
+. AddressBook updates the new particulars.
++
 Use case ends.
-Extensions
-•	4a. The edited format is wrong
-o	4a1. AddressBook shows an error message.
+
+*Extensions*
+* 4a. The edited format is wrong
+** 4a1. AddressBook shows an error message.
++
 Use case ends.
 
 === Use case: Find person
 *MSS*
-1.	User keys in the keyword to search in find command.
-2.	AddressBook displays the list of names which contains the keyword given.
+. User keys in the keyword to search in find command.
+. AddressBook displays the list of names which contains the keyword given.
++
 Use case ends.
-Extensions
-•	2a. AddressBook does not contain the keyword entered.
-o	2a1. AddressBook displays entered keyword not found.
+
+*Extensions*
+* 2a. AddressBook does not contain the keyword entered.
+** 2a1. AddressBook displays entered keyword not found.
++
 Use case ends.
 
 === Use case: Approve/reject off day request
-MSS
-1.	User enters command to switch to superuser
-2.	AddressBook prompts for password
-3.	User enters password
-4.	AddressBook prompts for superuser command
-5.	User enters command to view requests
-6.	AddressBook list out all requests
-7.	User enters employee name
-8.	AddressBook prompts user to approve or reject request
-9.	User enters approve/reject
-10.	AddressBook update database
+*MSS*
+. User enters command to switch to superuser
+. AddressBook prompts for password
+. User enters password
+. AddressBook prompts for superuser command
+. User enters command to view requests
+. AddressBook list out all requests
+. User enters employee name
+. AddressBook prompts user to approve or reject request
+. User enters approve/reject
+. AddressBook update database
++
 Use case ends.
-Extensions
-•	4a. Incorrect password
-o	4a1. AddressBook shows an error message.
+
+*Extensions*
+* 4a. Incorrect password
+** 4a1. AddressBook shows an error message.
++
 Use case resumes to step 2.
-•	6a. No such command 
-o	6a1. AddressBook shows an error message.
+
+* 6a. No such command 
+** 6a1. AddressBook shows an error message.
++
 Use case resumes to step 4.
-•	6b. No request found
-o	6b1. AddressBook shows an error message.
-Use case ends
-•	8a. No such employee with existing request found 
-o	8a1. AddressBook shows an error message.
+
+* 6b. No request found
+** 6b1. AddressBook shows an error message.
++
+Use case ends.
+
+* 8a. No such employee with existing request found 
+** 8a1. AddressBook shows an error message.
++
 Use case resumes to step 6.
 
 === Use case: Check schedule
-MSS
-1.	User enters command to check schedule
-2.	AddressBook display user’s schedule
+*MSS*
+. User enters command to check schedule
+. AddressBook display user’s schedule
++
 Use case ends.
-Extensions
-•	2a. No user schedule found.
-o	2a1. Address book displays message “No tasks scheduled for the day”.
+
+*Extensions*
+* 2a. No user schedule found.
+** 2a1. Address book displays message “No tasks scheduled for the day”.
++
 Use case ends.
 
 === Use case: Set schedule
 MSS
-1.	User enters command to switch to superuser
-2.	AddressBook prompts for password
-3.	User enters password
-4.	AddressBook prompts for superuser command
-5.	User enters command to set schedule
-6.	AddressBook prompts for the employee name 
-7.	User enters employee name
-8.	AddressBook prompts for the date of schedule and location
-9.	User enters the date and location
-10.	AddressBook updates the schedule
+. User enters command to switch to superuser
+. AddressBook prompts for password
+. User enters password
+. AddressBook prompts for superuser command
+. User enters command to set schedule
+. AddressBook prompts for the employee name 
+. User enters employee name
+. AddressBook prompts for the date of schedule and location
+. User enters the date and location
+. AddressBook updates the schedule
++
 Use case ends.
 
-Extensions
-•	8a. Employee name not found.
-o	8a1. AddressBook displays message “Employee not found”.
+*Extensions*
+* 8a. Employee name not found.
+** 8a1. AddressBook displays message “Employee not found”.
++
 Use case ends.
-•	10a. The date of schedule is already occupied.
-o	10a1. AddressBook displays message “Employee is busy on the given date”.
+
+* 10a. The date of schedule is already occupied.
+** 10a1. AddressBook displays message “Employee is busy on the given date”.
++
 Use case ends.
 
 === Use case: Set password
 MSS
-1.	User enters password command.
-2.	AddressBook shows the password format to be keyed in.
-3.	User keys in password.
-4.	AddressBook stores the person’s new password.
-Use case ends.
-Extensions
-•	4a. The password is keyed in the wrong format
-o	4a1. AddressBook shows an error message.
+. User enters password command.
+. AddressBook shows the password format to be keyed in.
+. User keys in password.
+. AddressBook stores the person’s new password.
++
 Use case ends.
 
+*Extensions*
+* 4a. The password is keyed in the wrong format
+** 4a1. AddressBook shows an error message.
++
+Use case ends.
 
 [appendix]
 == Non Functional Requirements
