@@ -101,6 +101,7 @@ Use case resumes at step 2.
 
 === Use case: Add Person
 *MSS*
+
 .	User enters add command.
 .	AddressBook prompts to add person.
 .	User enters the details of the new person.
@@ -109,6 +110,7 @@ Use case resumes at step 2.
 Use case ends.
 
 *Extensions*
+
 * 4a. Person already exists in the AddressBook.
 ** 4a1. AddressBook shows person already exists message.
 +
